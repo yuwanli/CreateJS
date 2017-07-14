@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <title>test02</title>
+    <!-- write your code here -->
+    <script>var ratio;</script>
+    <script src="js/resize.min.js"></script>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="oldman03.js"></script>
+    <script>
+        var canvas, stage, exportRoot, anim_container, fnStartAnimation;
+        function init() {
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            handleComplete();
+        }
+        function handleComplete() {
+            //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+            exportRoot = new oldman03.oldman03();
+            stage = new createjs.Stage(canvas);
+            stage.addChild(exportRoot);
+            //Registers the "tick" event listener.
+            fnStartAnimation = function () {
+                createjs.Ticker.setFPS(oldman03.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+            }
+            //Code to support hidpi screens and responsive scaling.
+            function makeResponsive() {
+                window.addEventListener('resize', resizeCanvas);
+                resizeCanvas();
+                function resizeCanvas() {
+                    var w = oldman03.properties.width, h = oldman03.properties.height;
+                    canvas.width = w/100 *ratio;
+                    canvas.height = h/100 *ratio;
+                    canvas.style.width = anim_container.style.width = w/100 *ratio + 'px';
+                    canvas.style.height = anim_container.style.height = h/100 *ratio + 'px';
+                    stage.scaleX = ratio/100;
+                    stage.scaleY = ratio/100;
+                }
+            }
+            makeResponsive();
+            fnStartAnimation();
+        }
+    </script>
+    <!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00)">
+    <canvas id="canvas" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+</div>
+</body>
+</html>
