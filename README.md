@@ -1,6 +1,8 @@
 CreateJS初体验
 ------------------
 
+test branch
+
 项目上线以后就迫不及待的想要分享我初次体验的这个CreateJs。
 
 CreateJS是基于HTML5开发的一套模块化的库和工具。基于这些库，可以非常快捷地开发出基于HTML5的游戏、动画和交互应用。这个是官网给的官方说法，简单的说就是一个游戏框架，说到游戏框架，自然要说到[phaser](https://github.com/photonstorm/phaser)、[pixi](https://github.com/pixijs/pixi.js)、[cocos](http://www.cocos.com/?v=CN)、[egret](https://www.egret.com/)等优秀的游戏框架。
