@@ -186,7 +186,7 @@ html{
 }
 ```
 
-还有一个常用的js插件，[pace.js](http://github.hubspot.com/pace/docs/welcome/)，简单的说下，这个就是实现页面进度条的一个插件。它会在100%的时候给`body`加上`pace-done`的class，然后也是通过这个class，后面几个page在没有这个class的时候是没有`background-image`的，有这个class的时候，才会去加载相应的class。实现的效果就是，页面打开的时候只加载的第一页的相关素材，完全打开以后才去加载后面的图片。
+还有一个常用的js插件，[pace.js](http://github.hubspot.com/pace/docs/welcome/)，简单的说下，这个就是实现页面进度条的一个插件。它会在资源加载到100%的时候给`body`加上`pace-done`的class，然后也是通过这个class，后面几个page在没有这个class的时候是没有`background-image`的，有这个class的时候，才会去加载相应的class。实现的效果就是，页面打开的时候只加载的第一页的相关素材，完全打开以后才去加载后面的图片。
 
 ![图片加载优化](readme-images/6.png "图片加载优化")
 
