@@ -196,7 +196,7 @@ html{
 
 这里建议用less或者sass等来编写css，这样的话，在做上面的这些优化就很快。
 
- 这个有一个东西要说一下-`viewport`，h5的话大家的第一反应应该是要加上`<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,minimum-scale=1, maximum-scale=1">`，当时查看源码的看，会发现我没有加，因为加了以后图片会变得模糊，这也是一直很困惑我的一个地方，我所有的游戏类的h5都没加这个meta。不知道大家有没有碰到过这种问题，或者更好的解决方案，可以留言给我。
+ 这个有一个东西要说一下-`viewport`，h5的话大家的第一反应应该是要加上`<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,minimum-scale=1, maximum-scale=1">`，当时查看源码的看，会发现我没有加，因为加了以后图片会变得模糊，这也是一直很困惑我的一个地方，我所有的游戏类的h5都没加这个meta，这个我在[phaser h5小游戏项目集锦](https://github.com/yuwanli/phaser-collection/blob/master/README.md)中最后有说到这个问题。不知道大家有没有碰到过这种问题，或者更好的解决方案，可以留言给我。
 
 
 
